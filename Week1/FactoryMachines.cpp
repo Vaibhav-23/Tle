@@ -1,30 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 bool isPossible(long long mid,vector<long long>&arr,long long k){
-    long long cnt=1,sum=0;
-    long long n=arr.size();
+    long long cnt=0,n=arr.size();
     for(long long i=0;i<n;i++){
-        if(sum+arr[i]<=mid){
-            sum+=arr[i];
-        }
-        else{
-            cnt++;
-            sum=arr[i];
-        }
+        cnt=cnt+(mid/arr[i]);
+        if(cnt>=k) return true;
     }
-    return cnt<=k;
+    return (cnt>=k);
 }
 void solve(){
     long long n,k;
     cin>>n>>k;
     vector<long long> arr(n);
-    long long low=0,high=0;
+    long long low=1,high=INT_MIN;
     for(long long i=0;i<n;i++){
         cin>>arr[i];
-        low=max(low,arr[i]);
-        high+=arr[i];
+        high=max(arr[i],high);
+        low=min(low,arr[i]);
     }
-    //cout<<low<<" "<<high<<" ";
+    high=high*k;
     long long res=0;
     while(low<=high){
         long long mid=(low+high)/2;
