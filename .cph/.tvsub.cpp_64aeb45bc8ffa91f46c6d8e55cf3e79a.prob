@@ -1,0 +1,1 @@
+{"name":"Local: tvsub","url":"/Users/vaibhavsharma/Desktop/Tle/tvsub.cpp","tests":[{"id":1704274937376,"input":"4\n5 2 2\n1 2 1 2 1\n9 3 3\n3 3 3 2 2 2 1 1 1\n4 10 4\n10 8 6 4\n16 9 8\n3 1 4 1 5 9 2 6 5 3 5 8 9 7 9 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/tvsub.cpp","group":"local","local":true}
