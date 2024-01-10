@@ -68,15 +68,48 @@ ll power(ll a, ll b, ll mod)
 }
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
+
+bool isPossible(ll k,vi &a){
+    bool flag=true;
+    ll i=a.size()-1;
+    for(ll j=k-1;j>=0;j--,i--){
+        if(!flag) break;
+        flag = (a[i]>a[j])&&(a[i-1]>a[j]) && (i>k);
+    }
+    return flag;
+}
 void solve(){
-   
+    ll n;
+    cin>>n;
+    vi a(n);
+    getInput(a);
+    sort(all(a));
+    //debug(a);
+    ll low=0,high=n-1,res=0;
+    while(low<=high){
+        ll mid=(low+high)/2;
+        if(isPossible(mid,a)){
+            res=mid;
+            low=mid+1;
+        }
+        else high=mid-1;
+    }
+    print(res);
+    vi ans(n);
+    ll i=n-1,j=res-1;
+    for(ll k=0;k<n;k++){
+        if(j<0) ans[k]=a[i--];
+        else if(k%2==0) ans[k]=a[i--];
+        else ans[k]=a[j--];
+    }
+     debug(ans);
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;
-    cin>>t;
+    int t=1;
+    //cin>>t;
     while(t){
         t--;
         solve();

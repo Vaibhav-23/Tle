@@ -69,7 +69,12 @@ ll power(ll a, ll b, ll mod)
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
 void solve(){
-   
+   ll n,k;
+   cin>>n>>k;
+   vi a(n);
+   getInput(a);
+   if(k>1 || is_sorted(all(a))) cout<<"YES"<<endl;
+   else  cout<<"NO"<<endl;
 }
 
 int main(){

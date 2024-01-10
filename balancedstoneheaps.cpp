@@ -22,6 +22,7 @@ ll gcd(ll a, ll b){
         return a;
     return gcd(b, a % b);
 }
+ll sum(vi &a){ return accumulate(all(a),0);}
 long long lcm(ll a, ll b){return (a / gcd(a, b)) * b;}
 bool isPrime(ll n)
 {
@@ -68,8 +69,38 @@ ll power(ll a, ll b, ll mod)
 }
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
+bool isPossible(ll k,vi &a){
+    ll n=a.size(),sum=0;
+    vi h(all(a));
+   //debug(h);
+    for(ll i=n-1;i>=0;i--){
+        if(h[i]<k) return false;
+        if(i>1){
+            ll d=(h[i]-k)/3;
+            d=min(d,a[i]/3);
+            h[i]=(h[i]-3*d);
+            h[i-1]+=d;
+            h[i-2]+=(2*d);
+        }
+        //print(h[i]);
+    }
+    return true;
+}
 void solve(){
-   
+   ll n;
+   cin>>n;
+   vi a(n);
+   getInput(a);
+   ll low=0,high=maxx(a),res=0;
+    while(low<=high){
+        ll mid=(low+high)/2;
+        if(isPossible(mid,a)){
+            res=mid;
+            low=mid+1;
+        }
+        else high=mid-1;
+    }
+    print(res);
 }
 
 int main(){

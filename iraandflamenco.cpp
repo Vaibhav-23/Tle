@@ -6,31 +6,9 @@ using ll = long long;
 #define rall(a) (a).rbegin(), (a).rend()
 #define lb lower_bound
 #define ub upper_bound
-using vi = vector<long long>;
-using vpi = vector<pair<ll, ll>>;
-#define ps(x, y) fixed << setprecision(y) << x
-ll INF = 1e18;
 ll MOD = 1e9 + 7;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);}
-
-//Operations in array
-ll maxx(vi &a){return (*max_element(a.begin(), a.end()));}
-ll minn(vi &a){return (*min_element(a.begin(), a.end()));}
-ll gcd(ll a, ll b){
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
-}
-long long lcm(ll a, ll b){return (a / gcd(a, b)) * b;}
-bool isPrime(ll n)
-{
-    if (n <= 1) return false;
-    for (ll i = 2; i * i <= n; i++){
-        if(n % i == 0) return false;
-    }
-    return true;
-}
 
 void getInput(vector<ll> &arr){
     for(ll i=0;i<arr.size();i++){
@@ -69,13 +47,37 @@ ll power(ll a, ll b, ll mod)
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
 void solve(){
-   
-}
+    ll n,k;
+    cin>>n>>k;
+    vector<ll> a(n);
+    map<ll,ll> freq;
+    set<ll> set;
+    for(ll i=0;i<n;i++){
+        cin>>a[i];
+        set.insert(a[i]);
+        freq[a[i]]++;
+    }
+    vector<ll>distinct(set.begin(),set.end());
+    //debug(distinct);
 
+    ll i=0,j=0,res=0,prod=1;
+    while(j<distinct.size()){
+        //prod=(prod*1LL*freq[distinct[j]])%MOD;
+        prod=mul(prod,freq[distinct[j]]);
+        while (i <= j && distinct[j] - distinct[i] >= k)
+        {
+            prod = mul(prod, modularInverse(freq[distinct[i]], MOD));
+            i++;
+        }
+        if(j-i+1==k) res=add(res,prod);
+        j++;
+    }
+    print(res);
+}
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;
+    ll t;
     cin>>t;
     while(t){
         t--;

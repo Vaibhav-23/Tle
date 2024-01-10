@@ -9,6 +9,7 @@ using ll = long long;
 using vi = vector<long long>;
 using vpi = vector<pair<ll, ll>>;
 #define ps(x, y) fixed << setprecision(y) << x
+using pii = pair<ll,ll>;
 ll INF = 1e18;
 ll MOD = 1e9 + 7;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
@@ -68,15 +69,51 @@ ll power(ll a, ll b, ll mod)
 }
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
+
+bool isPossible(ll steps,vector<pii>&loc,pii st,pii fi,ll n){
+    pii free={(steps/n)*loc[n-1].first+st.first,(steps/n)*loc[n-1].second+st.second};
+    if(steps%n){
+        free.first+=loc[steps%n-1].first;
+        free.second+=loc[steps%n-1].second;
+    }
+    ll dist = abs(free.first-fi.first)+abs(free.second-fi.second);
+    return dist<=steps;
+}
 void solve(){
-   
+   pii st,fi;
+   cin>>st.first>>st.second;
+   cin>>fi.first>>fi.second;
+   string str;
+   ll n;
+   cin>>n>>str;
+   vector<pii> loc(n);
+   pii curr={0,0};
+    for(ll i=0;i<n;i++){
+        if(str[i]=='U') curr.second++;
+        else if(str[i]=='D') curr.second--;
+        else if(str[i]=='L') curr.first--;
+        else curr.first++;
+        loc[i]={curr.first,curr.second};
+    }
+
+   ll low=0,high=2*1e14,res=-1;
+    while(low<=high){
+        ll mid=(low+high)/2;
+        if(isPossible(mid,loc,st,fi,n)){
+            res=mid;
+            high=mid-1;
+        }
+        else low=mid+1;
+    }
+
+    print(res);
 }
 
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    int t;
-    cin>>t;
+    int t=1;
+    //cin>>t;
     while(t){
         t--;
         solve();

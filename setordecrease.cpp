@@ -9,6 +9,7 @@ using ll = long long;
 using vi = vector<long long>;
 using vpi = vector<pair<ll, ll>>;
 #define ps(x, y) fixed << setprecision(y) << x
+
 ll INF = 1e18;
 ll MOD = 1e9 + 7;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
@@ -68,8 +69,35 @@ ll power(ll a, ll b, ll mod)
 }
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
+bool isPossible(ll op,vi &a,ll maxSum,ll sum){
+    if(sum-op<=maxSum) return true;
+    ll n=a.size();
+    //sum-=a[0];
+    for(ll i=n-1;i>=max(1ll,n-op);i--){
+        sum-=a[i];
+        ll opLeft=(op-n+i);
+        ll temp=sum+-a[0]+((n-i+1)*(a[0]-opLeft));
+        if(temp<=maxSum) return true;
+    }
+    return false;
+}
 void solve(){
-   
+    ll n,k;
+    cin>>n>>k;
+    vi a(n);
+    getInput(a);
+    sort(all(a));
+   ll low=0,high=1e10,res=1e10;
+   ll sum=accumulate(all(a),0ll);
+    while(low<=high){
+        ll mid=(low+high)/2;
+        if(isPossible(mid,a,k,sum)){
+            res=mid;
+            high=mid-1;
+        }
+        else low=mid+1;
+    }
+    print(res);
 }
 
 int main(){

@@ -68,8 +68,36 @@ ll power(ll a, ll b, ll mod)
 }
 ll modularInverse(ll number, ll mod){return power(number, mod - 2, mod);}
 //end of modular stuff
+bool isPossible(ll k,vi &a){
+    ll cnt=0,n=a.size();
+    for(int i=1;i<n-1;i++){
+        if(a[i]>a[i+1]&&a[i]>a[i-1]){
+            cnt++;
+            //cout<<a[i]<<i<<" ";
+        }
+        if(cnt>=k) return true;
+    }
+    return cnt>=k;
+}
 void solve(){
-   
+    ll n,k;
+    cin>>n>>k;
+    vi a(n),pre(n,0);
+    getInput(a);
+    for(ll i=1;i<n-1;i++){
+        if(a[i]>a[i+1]&&a[i]>a[i-1]) pre[i]=1;
+    }
+    for(ll i=1;i<n;i++){
+        pre[i]+=pre[i-1];
+    }
+    ll res=0,l=0;
+    for(ll i=0;i<(n-k+1);i++){
+        if(res<pre[i+k-2]-pre[i]){
+            res=pre[i+k-2]-pre[i];
+            l=i;
+        }
+    }
+    cout<<res+1<<" "<<l+1<<endl;
 }
 
 int main(){
