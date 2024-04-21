@@ -1,0 +1,1 @@
+{"name":"Local: collidera","url":"/Users/vaibhavsharma/Desktop/Tle/collidera.cpp","tests":[{"id":1705550695269,"input":"10 10\n+ 6\n+ 10\n+ 5\n- 10\n- 5\n- 6\n+ 10\n+ 3\n+ 6\n+ 3\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/collidera.cpp","group":"local","local":true}

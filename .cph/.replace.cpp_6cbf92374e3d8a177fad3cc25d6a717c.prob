@@ -1,0 +1,1 @@
+{"name":"Local: replace","url":"/Users/vaibhavsharma/Desktop/Tle/replace.cpp","tests":[{"id":1708587825574,"input":"4\n3 2\ncba\n4 5\nfgde\n7 5\ngndcafb\n4 19\nekyv\n","output":"aaa\nagaa\nbnbbabb\naapp\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/replace.cpp","group":"local","local":true}

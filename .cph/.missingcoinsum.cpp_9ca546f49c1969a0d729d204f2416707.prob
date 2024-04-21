@@ -1,0 +1,1 @@
+{"name":"Local: missingcoinsum","url":"/Users/vaibhavsharma/Desktop/Tle/missingcoinsum.cpp","tests":[{"id":1707719032840,"input":"5\n2 9 1 2 7\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/missingcoinsum.cpp","group":"local","local":true}

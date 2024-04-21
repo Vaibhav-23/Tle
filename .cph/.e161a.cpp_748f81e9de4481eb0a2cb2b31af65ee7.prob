@@ -1,0 +1,1 @@
+{"name":"Local: e161a","url":"/Users/vaibhavsharma/Desktop/Tle/e161a.cpp","tests":[{"id":1705588933982,"input":"4\n1\na\nb\nc\n2\naa\nbb\naa\n10\nmathforces\nluckforces\nadhoccoder\n3\nacc\nabd\nabc","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/e161a.cpp","group":"local","local":true}

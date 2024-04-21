@@ -1,0 +1,1 @@
+{"name":"Local: e161ccc","url":"/Users/vaibhavsharma/Desktop/Tle/e161ccc.cpp","tests":[{"id":1705591418109,"input":"1\n5\n0 8 12 15 20\n5\n1 4\n1 5\n3 4\n3 2\n5 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/e161ccc.cpp","group":"local","local":true}

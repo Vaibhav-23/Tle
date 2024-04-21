@@ -1,0 +1,1 @@
+{"name":"Local: redvsblue","url":"/Users/vaibhavsharma/Desktop/Tle/redvsblue.cpp","tests":[{"id":1706256252937,"input":"3\n7 4 3\n6 5 1\n19 13 6","output":"RBRBRBR\nRRRBRR\nRRBRRBRRBRRBRRBRRBR"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/redvsblue.cpp","group":"local","local":true}

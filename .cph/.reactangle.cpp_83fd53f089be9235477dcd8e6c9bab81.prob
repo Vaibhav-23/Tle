@@ -1,0 +1,1 @@
+{"name":"Local: reactangle","url":"/Users/vaibhavsharma/Desktop/Tle/reactangle.cpp","tests":[{"id":1707644826671,"input":"7\n1 1\n2 1\n2 6\n3 2\n2 2\n2 4\n6 3\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/reactangle.cpp","group":"local","local":true}

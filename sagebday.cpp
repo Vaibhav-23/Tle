@@ -92,6 +92,7 @@ void solve(){
             res=mid;
             low=mid+1;
         }
+        
         else high=mid-1;
     }
     print(res);

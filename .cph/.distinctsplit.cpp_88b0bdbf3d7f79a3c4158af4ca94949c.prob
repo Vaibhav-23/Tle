@@ -1,0 +1,1 @@
+{"name":"Local: distinctsplit","url":"/Users/vaibhavsharma/Desktop/Tle/distinctsplit.cpp","tests":[{"id":1705906919560,"input":"5\n2\naa\n7\nabcabcd\n5\naaaaa\n10\npaiumoment\n4\naazz\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/distinctsplit.cpp","group":"local","local":true}

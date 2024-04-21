@@ -1,0 +1,1 @@
+{"name":"Local: 930a","url":"/Users/vaibhavsharma/Desktop/Tle/930a.cpp","tests":[{"id":1709217626966,"input":"4\n1\n4\n5\n120240229\n","output":"1\n4\n4\n67108864\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/930a.cpp","group":"local","local":true}

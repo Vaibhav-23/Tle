@@ -1,0 +1,1 @@
+{"name":"Local: onetwo","url":"/Users/vaibhavsharma/Desktop/Tle/onetwo.cpp","tests":[{"id":1705656930777,"input":"3\n6\n2 2 1 2 1 2\n3\n1 2 1\n4\n1 1 1 1\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/vaibhavsharma/Desktop/Tle/onetwo.cpp","group":"local","local":true}

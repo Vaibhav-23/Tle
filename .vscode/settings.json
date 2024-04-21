@@ -4,6 +4,27 @@
         "vector": "cpp",
         "ostream": "cpp",
         "set": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "iostream": "cpp",
+        "iomanip": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "ios": "cpp",
+        "__hash_table": "cpp",
+        "__split_buffer": "cpp",
+        "__tree": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "queue": "cpp",
+        "regex": "cpp",
+        "stack": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp",
+        "IMT2020505.C": "cpp"
     }
 }
